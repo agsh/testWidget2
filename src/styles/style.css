@@ -4,14 +4,21 @@
 
 .videoList {
     float: right;
+    position: relative;
+    width: 400px;
 }
 
 .videoList > div {
     background-color: aquamarine;
+    line-height: 35px;
 }
 
 .videoList > div:hover {
     background-color: darkorange;
+}
+
+.videos {
+
 }
 
 .video {
@@ -27,4 +34,34 @@
     right: 0;
     transform: rotate(-45deg);
     color: orange;
+}
+
+.btn-wrap {
+    margin-bottom: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0 7px;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-add {
+    background-color: darkorange;
+}
+
+.btn-remove {
+    background-color: red;
+    position: absolute;
+    right: 0;
 }
