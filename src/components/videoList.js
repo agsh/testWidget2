@@ -54,6 +54,8 @@ class VideoList extends React.Component {
 				</div>
 				<div className="videos">
 					{videos}
+					<div className="empty"></div>
+					<div className="empty"></div>
 				</div>
 			</div>
 		);
