@@ -12,12 +12,15 @@ class VideoList extends React.Component {
 	 * Return random video url from the list
 	 * @return {string}
 	 */
-	getRandomVideo() {
-		return 'non-random-video';
+	getRandomVideo(videos) {
+		var rand = Math.floor(Math.random() * (videos.length + 1));
+		var str = videos[rand];
+		var strNew = str.replace("watch?v=", "embed/");
+		return strNew;
 	}
 
 	add() {
-		this.props.model.add(this.getRandomVideo());
+		this.props.model.add(this.getRandomVideo(this.props.videos));
 	}
 
 	remove(video) {
@@ -29,7 +32,7 @@ class VideoList extends React.Component {
 			return (
 				<div key={video.id}>
 					{video.url}
-					<button onClick={this.remove.bind(this, video)}>x</button>
+					<button className="btn btn-remove" onClick={this.remove.bind(this, video)}>x</button>
 				</div>
 			);
 		}, this);
@@ -43,8 +46,8 @@ class VideoList extends React.Component {
 		}, this);
 		return (
 			<div>
-				<div>
-					<button onClick={this.add.bind(this)}>+</button>
+				<div className="btn-wrap">
+					<button className="btn btn-add" onClick={this.add.bind(this)}>+</button>
 				</div>
 				<div className="videoList">
 					{list}
