@@ -25,13 +25,13 @@ const config = {
 		}]
 	}
 	, plugins: [
-		/*
+
 		new webpack.optimize.UglifyJsPlugin({
 			compressor: {
 				warnings: false
 			}
 		})
-		*/
+
 	]
 };
 
