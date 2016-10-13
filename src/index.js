@@ -9,7 +9,7 @@ const model = window.model = new VideoModel();
 
 const App = (props) => (
 	<div>
-		<p>Test task</p>
+		<h1>Test task</h1>
 		<VideoList model={model} videos={videos}/>
 	</div>
 );
