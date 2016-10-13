@@ -30,7 +30,7 @@ class VideoList extends React.Component {
 	render() {
 		const list = this.props.model.videos.map(video => {
 			return (
-				<div key={video.id}>
+				<div key={video.id} onClick={this.remove.bind(this, video)}>
 					{video.url}
 					<button className="btn btn-remove" onClick={this.remove.bind(this, video)}>x</button>
 				</div>
