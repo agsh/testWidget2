@@ -1,10 +1,12 @@
 * {
     font-family: Arial;
     box-sizing: border-box;
+    -webkit-transition: 0.3s ease all;
     transition: 0.3s ease all;
 }
 
 *:after, *:before {
+    webkit-transition: 0.3s ease all;
     transition: 0.3s ease all;
 }
 
@@ -33,17 +35,17 @@ h1 {
 }
 
 .videos {
+    position: relative;
     margin-right: 400px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-left: -15px;
+    left: -15px;
     border-right: 2px solid;
-}
 
-@keyframes timing {
-  50%{
-    opacity: 1;
-  }
 }
 
 iframe {
@@ -58,11 +60,6 @@ iframe {
     margin-bottom: 15px;
     width: 31%;
     border-bottom: 4px solid darkorange;
-    animation: timing 5s infinite;
-}
-
-.video:hover {
-
 }
 
 .video > span {
@@ -81,11 +78,10 @@ iframe {
 .btn {
     cursor: pointer;
     color: #fff;
-    font-size: 37px;
+    font-size: 35px;
     border: none;
     width: 40px;
     height: 40px;
-    padding: 0 7px;
     position: relative;
 }
 
@@ -98,17 +94,20 @@ iframe {
 }
 
 
-.btn-add:hover:after {
+.btn-add:hover::after {
     background-color: darkorange;
     color: #fff;
 }
+
 
 .btn-add:after {
     content: 'Добавить видео';
     display: inline-block;
     position: absolute;
     padding: 5px 24px;
-    width: 177px;
+    top: 0;
+    bottom: 0;
+    width: 170px;
     font-size: 21px;
     color: #000;
     border: 3px solid #ff8c00;
@@ -121,16 +120,12 @@ iframe {
     font-size: 30px;
 }
 
-.btn-remove:hover {
-
-}
-
 .empty {
-      height: 0px;
-      width: 45%;
-      margin-left: 15px;
-      margin-bottom: 0;
-    }
+    height: 0px;
+    width: 45%;
+    margin-left: 15px;
+    margin-bottom: 0;
+}
 
 
 
